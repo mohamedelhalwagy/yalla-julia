@@ -1,0 +1,41 @@
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic]{Amiri}
+\IfFontExistsTF{Scheherazade New}%
+  {\newfontfamily\bigletterfont[Script=Arabic]{Scheherazade New}}%
+  {\IfFontExistsTF{Lateef}%
+    {\newfontfamily\bigletterfont[Script=Arabic]{Lateef}}%
+    {\newfontfamily\bigletterfont[Script=Arabic]{Amiri}}}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{fontawesome5}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\begin{document}
+\section*{Smoke Test -- bitte zuerst kompilieren}
+Wenn du das hier lesen kannst, funktioniert Deutsch. \faSmileWink
+
+Arabisch (rechtsläufig, verbunden, Amiri):
+\textarabic{مرحباً، كيف حالك؟}
+
+Große Lettering-Schrift (mit automatischem Fallback -- darf NIE fehlschlagen):
+\textarabic{\bigletterfont\fontsize{40}{40}\selectfont بيت}
+
+Ein einzelner, isolierter Buchstabe (das war der Bug -- muss jetzt sichtbar sein):
+\textarabic{\bigletterfont\fontsize{40}{40}\selectfont ت}
+
+Klickbarer Link (sollte Google Translate mit "مرحبا" öffnen):
+\href{https://translate.google.com/?sl=ar&tl=de&op=translate&text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7}{\textcolor{blue}{\faVolumeUp\ hier tippen}}
+
+Farbbox:
+\begin{tcolorbox}[colback=orange!15,colframe=orange!70!black,title=Test-Box]
+Wenn diese Box mit Rahmen und Titel erscheint, ist tcolorbox startklar.
+\end{tcolorbox}
+
+Wenn alle Punkte oben sichtbar sind (inklusive des einzelnen Buchstabens!):
+Compiler auf \textbf{XeLaTeX} stellen (Menu -> Compiler), und alles ist
+bereit für das große Dokument.
+\end{document}

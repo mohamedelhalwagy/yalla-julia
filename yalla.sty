@@ -1,0 +1,66 @@
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{yalla}[2026/08/16 Yalla Julia course macros v1.1]
+\RequirePackage{xcolor}
+\RequirePackage{tcolorbox}
+\RequirePackage{fontawesome5}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{array}
+\RequirePackage{enumitem}
+\usetikzlibrary{shapes}
+\definecolor{yallateal}{HTML}{1B7F79}
+\definecolor{yallasand}{HTML}{E8C07D}
+\definecolor{yallared}{HTML}{C1440E}
+\definecolor{yallanight}{HTML}{123C4A}
+\definecolor{yallapale}{HTML}{FBF4E4}
+
+\IfFontExistsTF{Scheherazade New}%
+  {\newfontfamily\bigletterfont[Script=Arabic]{Scheherazade New}}%
+  {\IfFontExistsTF{Lateef}%
+    {\newfontfamily\bigletterfont[Script=Arabic]{Lateef}}%
+    {\newfontfamily\bigletterfont[Script=Arabic]{Amiri}}}
+
+\newtcolorbox{tippbox}{colback=yallasand!25,colframe=yallared,boxrule=0.8pt,arc=2pt,fonttitle=\bfseries,coltitle=yallanight,title={\faLightbulb\ Insider-Tipp}}
+\newtcolorbox{lachbox}{colback=yallateal!12,colframe=yallateal,boxrule=0.8pt,arc=2pt,fonttitle=\bfseries,coltitle=yallanight,title={\faSmileWink\ Lach-Pause}}
+\newtcolorbox{ibmbox}{colback=yallanight!8,colframe=yallanight,boxrule=1pt,arc=2pt,fonttitle=\bfseries,coltitle=white,colbacktitle=yallanight,title={\faClock\ Die IBM-Regel}}
+\newtcolorbox{ammahmoudbox}{colback=white,colframe=yallared,boxrule=0.8pt,arc=2pt,fonttitle=\bfseries,coltitle=yallared,title={\faTaxi\ Am Mahmoud sagt...}}
+\newtcolorbox{bissobox}{colback=white,colframe=yallateal,boxrule=0.8pt,arc=2pt,fonttitle=\bfseries,coltitle=yallateal,title={\faPaw\ Bissos Ecke}}
+\newtcolorbox{checkpointbox}{colback=yallasand!35,colframe=yallanight,boxrule=1pt,arc=1pt,fonttitle=\bfseries,coltitle=yallanight,title={\faFlagCheckered\ Checkpoint}}
+
+\newcommand{\arword}[4]{%
+  \textarabic{\Large #1}~%
+  \href{https://translate.google.com/?sl=ar&tl=de&op=translate&text=#4}{\textcolor{yallateal}{\small\faVolumeUp}}%
+  \quad\textit{#2}\ --\ #3%
+}
+
+\newcommand{\arwordvoice}[3]{%
+  \textarabic{\Large #1}~%
+  {\small\color{gray!60}\faHeart}%
+  \quad\textit{#2}\ --\ #3\ {\scriptsize\color{gray!60}(Mohameds Stimme folgt in v1.1)}%
+}
+
+\newcommand{\tracerow}[1]{%
+  \begin{center}
+  \textarabic{\bigletterfont\fontsize{60}{60}\selectfont
+    \textcolor{yallanight}{#1}\quad
+    \textcolor{gray!45}{#1}\quad
+    \textcolor{gray!30}{#1}\quad
+    \textcolor{gray!18}{#1}%
+  }
+  \end{center}%
+}
+
+\newcommand{\arbig}[1]{\textarabic{\bigletterfont\fontsize{30}{30}\selectfont #1}}
+
+\newcommand{\yallarule}{%
+  \begin{center}
+  \begin{tikzpicture}
+    \foreach \x in {0,0.4,...,14} {
+      \draw[yallateal, line width=0.6pt] (\x,0) -- (\x+0.2,0.15) -- (\x+0.4,0);
+    }
+  \end{tikzpicture}
+  \end{center}%
+}
+
+\endinput

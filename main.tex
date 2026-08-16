@@ -1,0 +1,55 @@
+% !TeX program = xelatex
+\documentclass[12pt,a4paper,openany]{book}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{german}
+\setotherlanguage{arabic}
+\newfontfamily\arabicfont[Script=Arabic,Scale=1.1]{Amiri}
+\usepackage{geometry}
+\geometry{a4paper, margin=2.2cm}
+\usepackage{yalla}
+\usepackage[colorlinks=true, linkcolor=yallateal, urlcolor=yallared, citecolor=yallateal]{hyperref}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries\color{yallanight}}{Teil \thechapter}{10pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{30pt}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE]{\textit{Yalla, Julia!}}
+\fancyhead[LO]{\leftmark}
+\renewcommand{\headrulewidth}{0.4pt}
+\title{\Huge\bfseries\color{yallanight}Yalla, Julia!\\[6pt]\Large\color{yallared}Arabisch für Ägypten\\[4pt]\large\color{yallanight}Band 1 -- Die Buchstaben \& das Überleben}
+\author{ein Projekt von Mohamed, für Julia \faHeart}
+\date{A1 \ -- \ Version 1.1}
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\centering
+\vspace*{1cm}
+\yallarule
+\vspace{1.5cm}
+{\Huge\bfseries\color{yallanight} Yalla, Julia! \faSmileWink}\\[10pt]
+{\Large\color{yallared} Arabisch für Ägypten}\\[6pt]
+{\large\color{yallanight} Band 1 -- Die Buchstaben \& das Überleben}\\[4pt]
+{\normalsize\itshape Niveau A1 -- Version 1.1}
+\vspace{2cm}
+\textarabic{\bigletterfont\fontsize{40}{40}\selectfont مرحباً يا جوليا}
+\vspace{1.5cm}
+{\normalsize für Julia -- mit viel Liebe (und ein bisschen kontrolliertem Chaos)}
+\vfill
+\yallarule
+\end{titlepage}
+\tableofcontents
+\input{content/00_vorwort}
+\mainmatter
+\input{content/01_buchstaben1}
+\input{content/02_buchstaben2}
+\input{content/03_vokale}
+\input{content/04_ueberleben1}
+\input{content/05_ueberleben2}
+\input{content/06_ibm}
+\input{content/07_zahlen}
+\input{content/08_uebungen}
+\end{document}

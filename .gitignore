@@ -1,0 +1,31 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.fmt
+*.glo
+*.gls
+*.log
+*.nav
+*.out
+*.snm
+*.synctex
+*.synctex.gz
+*.toc
+*.xdv
+
+# Generated PDF (build output, not source)
+main.pdf
+
+# IDE and OS files
+.DS_Store
+*~
+*.swp
+*.swo
+.vscode/temp*
+
+# Temporary files
+/tmp/
+*.tmp
