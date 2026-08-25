@@ -23,7 +23,7 @@ Interaktives Arabisch-Lehrbuch (الفُصْحى / Hocharabisch) mit voller Voka
 python3 tools/build_book.py
 ```
 - Inhalt: `tools/book_fusha.py` (einzige Datei, die man für neue Kapitel editiert)
-- Audio: Google-Translate-Stimme wird pro Satz erfasst, gecacht (`web/_audio`)
+- Audio: Google-Translate-Stimme wird pro Satz erfasst, gecacht (`docs/_audio`)
   und als Base64 eingebettet; Masri-Ecke spricht `ar-EG-ShakirNeural`;
   Fallback: `ar-SA-ZariyahNeural`
 - Das Buch wächst Kapitel für Kapitel — Julia installiert einmal, Updates kommen automatisch.

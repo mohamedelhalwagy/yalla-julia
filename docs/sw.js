@@ -35,7 +35,7 @@ self.addEventListener('fetch', e => {
         })
         .catch(() =>
           caches.match(e.request, { ignoreSearch: true })
-            .then(hit => hit || caches.match('./yalla.html'))
+            .then(hit => hit || caches.match('./index.html'))
         )
     );
     return;
