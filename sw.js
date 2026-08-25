@@ -1,4 +1,4 @@
-const CACHE = 'yalla-julia-v1';
+const CACHE = 'yalla-julia-v2';
 const ASSETS = [
   './',
   './index.html',
@@ -23,6 +23,25 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   if (e.request.method !== 'GET') return;
+
+  // HTML pages: network-first (updates arrive immediately), cache as offline fallback
+  if (e.request.mode === 'navigate' || e.request.destination === 'document') {
+    e.respondWith(
+      fetch(e.request)
+        .then(res => {
+          const copy = res.clone();
+          caches.open(CACHE).then(c => c.put(e.request, copy));
+          return res;
+        })
+        .catch(() =>
+          caches.match(e.request, { ignoreSearch: true })
+            .then(hit => hit || caches.match('./yalla.html'))
+        )
+    );
+    return;
+  }
+
+  // everything else (icons, fonts, ...): cache-first
   e.respondWith(
     caches.match(e.request, { ignoreSearch: true }).then(hit =>
       hit ||
@@ -30,7 +49,7 @@ self.addEventListener('fetch', e => {
         const copy = res.clone();
         caches.open(CACHE).then(c => c.put(e.request, copy));
         return res;
-      }).catch(() => caches.match('./yalla.html'))
+      })
     )
   );
 });
