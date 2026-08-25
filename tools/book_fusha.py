@@ -61,6 +61,13 @@ CHAPTERS = [
                  {"icon": "🃏", "text": "Flashcard-Modus — die Wörter des Kapitels im Test"},
              ]},
 
+            {"type": "callout", "variant": "tip", "title": "Dein Lernrhythmus", "icon": "📅",
+             "text": "Zehn Minuten am Tag schlagen drei Stunden am Wochenende. Der Rhythmus: "
+             "(1) Das Kapitel einmal laut mitlesen. (2) Jedes 🔊 hören und nachsprechen — "
+             "mit dem 🐢-Knopf oben rechts, wenn es zu schnell ist. (3) Die Flashcards des "
+             "Kapitels, bis alles ✓ sitzt — der Zähler merkt sich, was du kannst. Mehr "
+             "braucht es nicht. Versprochen."},
+
             {"type": "h2", "text": "Die Umschrift — dein Schlüssel zum Klang"},
             {"type": "p",
              "text": "Wir schreiben Arabisch mit ein paar Sonderzeichen um. Die kennst du zum "
@@ -283,6 +290,277 @@ CHAPTERS = [
 
             {"type": "closing", "arabic": "هَيَّا بِنَا!", "latin": "hayyā binā",
              "latin_text": "Auf geht's, wir beide! — das klassische Arabisch für yalla bēna"},
+        ],
+    },
+
+    # =========================================================================
+    # Teil 2 -- Buchstaben-Werkstatt II (Sturköpfe + lange Vokale)
+    # =========================================================================
+    {
+        "id": "teil2",
+        "teaser": "Teil 2 — Werkstatt II",
+        "blocks": [
+            {"type": "h1", "text": "Teil 2 — Die Buchstaben-Werkstatt II: ا و ر ز د ذ"},
+
+            {"type": "p",
+             "text": "Sechs Buchstaben mit Charakter: ا و ر ز د ذ verbinden sich zwar mit dem, "
+             "was vor ihnen kommt — aber niemals mit dem, was danach kommt. Nach ihnen fängt "
+             "jeder Buchstabe wieder von vorne an. Kein Druckfehler. Absicht."},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "Das sind die Sturköpfe der Familie: Sie hören zu (verbinden sich nach "
+             "hinten), aber sie geben nie die Hand (verbinden sich nie nach vorne). Ziemlich "
+             "deutsches Verhalten, eigentlich."},
+
+            # ---------------- die sechs Sturköpfe ----------------
+            {"type": "letter", "letter": "أَ", "name": "alif — a / ā",
+             "dots": "Keine Punkte, kein Vorne-Verbinden — der gerade Rücken des Alphabets. "
+             "Am Wortanfang trägt er den Hamza-Knacklaut wie einen Sattel.",
+             "examples": [
+                 {"arabic": "أَبٌ", "t": "abun", "meaning": "ein Vater (Hamza reitet auf dem Alif)", "pos": "Anfang"},
+                 {"arabic": "بَابٌ", "t": "bābun", "meaning": "eine Tür — langes ā", "pos": "Mitte"},
+                 {"arabic": "كِتَابٌ", "t": "kitābun", "meaning": "ein Buch — langes ā", "pos": "Mitte"},
+             ]},
+            {"type": "letter", "letter": "وَ", "name": "wāw — w / ū",
+             "dots": "Zwei Talente: als Konsonant w und als langer Vokal ū. Sieht aus wie ein "
+             "kleiner Mond mit Schwanz.",
+             "examples": [
+                 {"arabic": "وَلَدٌ", "t": "waladun", "meaning": "ein Junge (Konsonant w)", "pos": "Anfang"},
+                 {"arabic": "نُورٌ", "t": "nūrun", "meaning": "Licht — langes ū", "pos": "Mitte"},
+                 {"arabic": "وَرْدَةٌ", "t": "wardatun", "meaning": "eine Rose", "pos": "Anfang"},
+             ]},
+            {"type": "letter", "letter": "رَ", "name": "rā — r",
+             "dots": "Zunge zittern lassen wie ein Motor — das arabische r rollt von ganz allein.",
+             "examples": [
+                 {"arabic": "رَجُلٌ", "t": "rajulun", "meaning": "ein Mann", "pos": "Anfang"},
+                 {"arabic": "وَرْدَةٌ", "t": "wardatun", "meaning": "eine Rose (r in der Mitte)", "pos": "Mitte"},
+                 {"arabic": "نَهْرٌ", "t": "nahrun", "meaning": "ein Fluss (r am Ende)", "pos": "Ende"},
+             ]},
+            {"type": "letter", "letter": "زَ", "name": "zāy — stimmhaftes s (wie in „Rose“)",
+             "dots": "Punkt oben, eleganter Schweif. In der Mitte sieht er genauso aus — nur einsam.",
+             "examples": [
+                 {"arabic": "زَيْتٌ", "t": "zaytun", "meaning": "Öl", "pos": "Anfang"},
+                 {"arabic": "زَرَافَةٌ", "t": "zarāfatun", "meaning": "eine Giraffe", "pos": "Anfang"},
+             ]},
+            {"type": "letter", "letter": "دَ", "name": "dāl — d",
+             "dots": "Ein Winkel, mehr nicht. Verbindet sich nie nach vorne — Sturkopf Nummer eins.",
+             "examples": [
+                 {"arabic": "دَرْسٌ", "t": "darsun", "meaning": "eine Lektion", "pos": "Anfang"},
+                 {"arabic": "دَارٌ", "t": "dārun", "meaning": "ein Haus, ein Anwesen — langes ā", "pos": "Anfang"},
+                 {"arabic": "وَلَدٌ", "t": "waladun", "meaning": "ein Junge (d am Ende)", "pos": "Ende"},
+             ]},
+            {"type": "letter", "letter": "ذَ", "name": "dhāl — weiches th (wie in engl. „this“)",
+             "dots": "Der Bruder des د — gleiche Form, aber mit Hut. Selten, aber edel.",
+             "examples": [
+                 {"arabic": "ذَهَبٌ", "t": "dhabun", "meaning": "Gold", "pos": "Anfang"},
+                 {"arabic": "هَذَا", "t": "hādhā", "meaning": "dieser hier", "pos": "Mitte"},
+             ]},
+
+            # ---------------- Grammatik: lange Vokale ----------------
+            {"type": "h2", "text": "Grammatik-Geheimnis 4: Länge ändert die Bedeutung!"},
+            {"type": "p",
+             "text": "Lange Vokale (ā, ī, ū) sind echte Buchstaben (ا و ي) — kurze sind nur "
+             "Zeichen (َ ِ ُ). Das klingt nach Detail. Ist es nicht: Die Länge dreht das Wort "
+             "komplett um. Zwei Beispiele, die man nie vergisst:"},
+            {"type": "atable",
+             "header": ["mit langem Vokal", "mit kurzem Vokal", "Die Überraschung"],
+             "ar_col": [0, 1],
+             "rows": [
+                 ["كِتَابٌ", "كُتُبٌ", "kitābun = ein Buch → kutubun = BÜCHER!"],
+                 ["رِجَالٌ", "رَجُلٌ", "rijālun = MÄNNER → rajulun = ein Mann"],
+             ],
+             "note": "Merksatz: Ein Dehn-Zeichen mehr kann aus einem Buch eine ganze "
+             "Bibliothek machen. Deshalb: Vokale hören, nicht raten."},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "Stell dir vor, im Deutschen wäre „Hahn“ mit kurzem a plötzlich „Hun“ und "
+             "würde einen Huhn-Plural auslösen. Genau so fühlt sich كِتَابٌ gegen كُتُبٌ an. "
+             "Arabisch nimmt seine Vokale ernst. Sehr ernst."},
+
+            # ---------------- Vokabeln ----------------
+            {"type": "vocab", "title": "Acht neue Wörter — Familie und Gold",
+             "words": [
+                 {"arabic": "أَبٌ", "t": "abun", "meaning": "ein Vater"},
+                 {"arabic": "أُمٌّ", "t": "ummun", "meaning": "eine Mutter (mit Shadda!)"},
+                 {"arabic": "وَلَدٌ", "t": "waladun", "meaning": "ein Junge"},
+                 {"arabic": "وَرْدَةٌ", "t": "wardatun", "meaning": "eine Rose"},
+                 {"arabic": "رَجُلٌ", "t": "rajulun", "meaning": "ein Mann"},
+                 {"arabic": "زَيْتٌ", "t": "zaytun", "meaning": "Öl"},
+                 {"arabic": "دَرْسٌ", "t": "darsun", "meaning": "eine Lektion"},
+                 {"arabic": "ذَهَبٌ", "t": "dhabun", "meaning": "Gold"},
+             ]},
+
+            # ---------------- Masri-Ecke ----------------
+            {"type": "masri",
+             "arabic": "الذَّهَبِ دَه غَالِي أَوِي!",
+             "t": "id-dahab da ghāli awi!",
+             "text": "Am Mahmoud zum Thema Gold: „id-dahab da ghāli awi!“ — Dieses Gold ist "
+             "sehr teuer! Merk dir غَالِي (ghāli, teuer) gut — es ist DAS Verhandlungswort "
+             "Ägyptens. Und das Tanwīn? Wie immer: auf der Straße verboten."},
+
+            {"type": "callout", "variant": "bisso", "title": "Bissos Ecke", "icon": "🐈",
+             "text": "Bisso und die وَرْدَةٌ: Rosenduft — herrlich. Rosendornen — Verrat. "
+             "Katzenlogik in Reinform. Übrigens: Wenn Bisso neugierig ist, krümmt sich ihr "
+             "Schwanz genau zu einem وَ. Der einzige Sturkopf, den sie akzeptiert."},
+
+            # ---------------- Quiz ----------------
+            {"type": "h2", "text": "Schnell-Quiz: Welcher Sturkopf beginnt das Wort?"},
+            {"type": "quiz", "items": [
+                {"arabic": "وَرْدَةٌ", "t": "wardatun", "meaning": "eine Rose", "answer": "و"},
+                {"arabic": "رَجُلٌ", "t": "rajulun", "meaning": "ein Mann", "answer": "ر"},
+                {"arabic": "زَيْتٌ", "t": "zaytun", "meaning": "Öl", "answer": "ز"},
+                {"arabic": "دَرْسٌ", "t": "darsun", "meaning": "eine Lektion", "answer": "د"},
+                {"arabic": "ذَهَبٌ", "t": "dhabun", "meaning": "Gold", "answer": "ذ"},
+            ]},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Checkpoint", "icon": "🏁",
+             "text": "Drei Fragen: (1) Warum verbindet sich دَ in وَلَدٌ nicht mit dem ل danach? "
+             "(2) Was ist der Unterschied zwischen كِتَابٌ und كُتُبٌ? (3) Wie viele "
+             "Buchstaben kannst du jetzt schon lesen? Elf! Das ist ein Drittel des Alphabets."},
+
+            {"type": "closing", "arabic": "مُمْتَازٌ!", "latin": "mumtāzun",
+             "latin_text": "Ausgezeichnet! — genau das bist du"},
+        ],
+    },
+
+    # =========================================================================
+    # Teil 3 -- Buchstaben-Werkstatt III (Die Kehl-Bande)
+    # =========================================================================
+    {
+        "id": "teil3",
+        "teaser": "Teil 3 — Werkstatt III",
+        "blocks": [
+            {"type": "h1", "text": "Teil 3 — Die Buchstaben-Werkstatt III: ج ح خ ع غ"},
+
+            {"type": "p",
+             "text": "Fünf Buchstaben, die tief im Hals wohnen: die Kehl-Bande. Deutsch hat "
+             "genau ein h — Arabisch hat ein ganzes Orchester. Keine Sorge: Mit den 🔊-Knöpfen "
+             "und ein bisschen Mut bekommst du alle fünf."},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "Stell dir den Hals als fünfstöckiges Haus vor: ه wohnt im Erdgeschoss "
+             "(ganz leicht), ح im ersten (gehaucht), خ im zweiten (kratzig), ع im dritten "
+             "(gedrosselt), غ im vierten (rollig). Die Nachbarn hören sich gegenseitig — aber "
+             "verwechselt wird niemand."},
+
+            # ---------------- die fünf Hals-Buchstaben ----------------
+            {"type": "letter", "letter": "جَ", "name": "jīm — dsch (wie in „Dschungel“)",
+             "dots": "Ein Punkt in der Mitte — der Bauchnabel-Buchstabe. Er VERBINDET sich in "
+             "beide Richtungen: kein Sturkopf!",
+             "examples": [
+                 {"arabic": "جَمَلٌ", "t": "jamalun", "meaning": "ein Kamel 🐪", "pos": "Anfang"},
+                 {"arabic": "جَبَلٌ", "t": "jabalun", "meaning": "ein Berg", "pos": "Anfang"},
+             ]},
+            {"type": "letter", "letter": "حَ", "name": "ḥā — scharfes, gehauchtes H",
+             "dots": "Keine Punkte — man erkennt ihn am Klang: wie ausatmen auf einem "
+             "kalten Spiegel.",
+             "examples": [
+                 {"arabic": "حُبٌّ", "t": "ḥubbun", "meaning": "Liebe (mit Shadda!)", "pos": "Anfang"},
+                 {"arabic": "أَحْمَد", "t": "aḥmad", "meaning": "Ahmad — ḥ in der Mitte", "pos": "Mitte"},
+             ]},
+            {"type": "letter", "letter": "خَ", "name": "khā — ch (wie in „Bach“)",
+             "dots": "Punkt oben — der kratzige Bruder des ح. Dein deutsches „Bach“-ch ist "
+             "schon perfekt.",
+             "examples": [
+                 {"arabic": "خُبْزٌ", "t": "khubzun", "meaning": "Brot", "pos": "Anfang"},
+                 {"arabic": "خَيْرٌ", "t": "khayrun", "meaning": "das Gute", "pos": "Anfang"},
+             ]},
+            {"type": "letter", "letter": "عَ", "name": "ʿayn — DER Kehllaut",
+             "dots": "Der Star des Alphabets. Klingt wie ein „a“, bei dem man sich selbst "
+             "sanft am Hals drückt. Übe: Hand an den Hals, Ton an.",
+             "examples": [
+                 {"arabic": "عَيْنٌ", "t": "3aynun", "meaning": "ein Auge, eine Quelle", "pos": "Anfang"},
+                 {"arabic": "عَرَبِيٌّ", "t": "3arabiyyun", "meaning": "arabisch (Shadda + Tanwīn!)", "pos": "Mitte & Ende"},
+             ]},
+            {"type": "letter", "letter": "غَ", "name": "ghayn — zärtliches Kehl-r",
+             "dots": "Punkt oben auf dem ع — klingt wie das französische r in „Paris“. "
+             "Schnurren erlaubt.",
+             "examples": [
+                 {"arabic": "غَدًا", "t": "ghadan", "meaning": "morgen", "pos": "Anfang"},
+                 {"arabic": "غُرَابٌ", "t": "ghurābun", "meaning": "ein Rabe", "pos": "Anfang"},
+             ]},
+
+            # ---------------- Grammatik: die H-Familie ----------------
+            {"type": "h2", "text": "Grammatik-Geheimnis 5: Die H-Familie im Überblick"},
+            {"type": "p",
+             "text": "Fünf Buchstaben, die Deutsche alle als „h“ hören — und die für arabische "
+             "Ohren so verschieden sind wie T und D für dich. Hier die komplette Familie zum "
+             "Anhören und Unterscheiden:"},
+            {"type": "atable",
+             "header": ["Zeichen", "Stockwerk", "Arabisch", "Umschrift"],
+             "ar_col": [0, 2],
+             "rows": [
+                 ["هَ", "Erdgeschoss — leichtes h", "هُنَا", "hunā — hier"],
+                 ["حَ", "1. Stock — gehaucht, scharf", "أَحْمَد", "aḥmad"],
+                 ["خَ", "2. Stock — kratziges ch", "خُبْزٌ", "khubz — Brot"],
+                 ["عَ", "3. Stock — gedrosselt", "عَيْنٌ", "3ayn — Auge"],
+                 ["غَ", "4. Stock — schnurrendes r", "غُرَابٌ", "ghurāb — Rabe"],
+             ],
+             "note": "Tipp: Hände an den Hals, die Reihe runterlesen und die Vibration "
+             "fühlen. Von stockwerk zu Stockwerk wandert der Ton nach oben."},
+
+            # ---------------- Grammatik: und = وَ ----------------
+            {"type": "h2", "text": "Grammatik-Geheimnis 6: „und“ klebt — die Waw als Vorsilbe"},
+            {"type": "p",
+             "text": "Und jetzt das erste Wort, das du Bauen kannst: وَ bedeutet „und“ — aber "
+             "es steht nie allein. Es KLEBT an das nächste Wort: أَبٌ وَأُمٌّ spricht man "
+             "„abun wa-ummun“. Ein Wort, ein Grammatik-Kleber. So baut Arabisch Sätze wie "
+             "Lego."},
+
+            {"type": "atable",
+             "header": ["… und …", "Klang", "Deutsch"],
+             "ar_col": 0,
+             "rows": [
+                 ["أَبٌ وَأُمٌّ", "abun wa-ummun", "ein Vater und eine Mutter"],
+                 ["دَرْسٌ وَكِتَابٌ", "darsun wa-kitābun", "eine Lektion und ein Buch"],
+             ],
+             "note": "Siehst du es? Das وَ verschmilzt mit dem nächsten Wort zu EINEM "
+             "Sprechrhythmus: wa-UMMUN, wa-kitāBUN. Arabisch redet in Wellen."},
+
+            # ---------------- Vokabeln ----------------
+            {"type": "vocab", "title": "Acht neue Wörter — Kamele und Brot",
+             "words": [
+                 {"arabic": "جَمَلٌ", "t": "jamalun", "meaning": "ein Kamel 🐪"},
+                 {"arabic": "جَبَلٌ", "t": "jabalun", "meaning": "ein Berg"},
+                 {"arabic": "حُبٌّ", "t": "ḥubbun", "meaning": "Liebe"},
+                 {"arabic": "خُبْزٌ", "t": "khubzun", "meaning": "Brot"},
+                 {"arabic": "عَيْنٌ", "t": "3aynun", "meaning": "ein Auge, eine Quelle"},
+                 {"arabic": "غُرَابٌ", "t": "ghurābun", "meaning": "ein Rabe"},
+                 {"arabic": "غَدًا", "t": "ghadan", "meaning": "morgen"},
+                 {"arabic": "أُمٌّ", "t": "ummun", "meaning": "eine Mutter"},
+             ]},
+
+            # ---------------- Masri-Ecke ----------------
+            {"type": "masri",
+             "arabic": "الخُبْزِ عِنْدَنَا اسْمُهُ عِيش!",
+             "t": "il-khubz 3andana ismuh 3ēsh!",
+             "text": "Am Mahmoud klärt auf: „Brot sagen wir عِيش (ʿēš). Und weißt du was? "
+             "عِيش kommt vom Wort ‚leben‘ — Brot ist Leben. Punkt.“ In Kairo stimmt das "
+             "wörtlich: Ohne ʿēš kein Tag. Grammatik-Endungen auch hier: Fehlanzeige."},
+
+            {"type": "callout", "variant": "bisso", "title": "Bissos Ecke", "icon": "🐈",
+             "text": "Bisso hat das Wort خُبْزٌ nie gelernt — und beherrscht es perfekt. "
+             "Flüstert Julia es nur, materialisiert Bisso in unter vier Sekunden aus dem "
+             "Nichts. Wissenschaftler rätseln. Bisso isst."},
+
+            # ---------------- Quiz ----------------
+            {"type": "h2", "text": "Schnell-Quiz: Welcher Hals-Buchstabe beginnt das Wort?"},
+            {"type": "quiz", "items": [
+                {"arabic": "جَمَلٌ", "t": "jamalun", "meaning": "ein Kamel", "answer": "ج"},
+                {"arabic": "حُبٌّ", "t": "ḥubbun", "meaning": "Liebe", "answer": "ح"},
+                {"arabic": "خُبْزٌ", "t": "khubzun", "meaning": "Brot", "answer": "خ"},
+                {"arabic": "عَيْنٌ", "t": "3aynun", "meaning": "ein Auge", "answer": "ع"},
+                {"arabic": "غُرَابٌ", "t": "ghurābun", "meaning": "ein Rabe", "answer": "غ"},
+            ]},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Checkpoint", "icon": "🏁",
+             "text": "Drei Fragen: (1) Welcher Buchstabe ist kein Sturkopf — und verbindet "
+             "sich beidseitig? (ج!) (2) Wie sagt man „Brot und Leben“ auf Kairoisch? "
+             "(ʿēš!) (3) Kannst du أَبٌ وَأُمٌّ flüssig sagen? Dann: Sechzehn Buchstaben "
+             "kannst du jetzt — mehr als die Hälfte des Alphabets!"},
+
+            {"type": "closing", "arabic": "إِلَى اللِّقَاءِ!", "latin": "ilā l-liqāʾi",
+             "latin_text": "Bis zum Wiedersehen! — das elegante Abschied"},
         ],
     },
 ]

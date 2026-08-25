@@ -137,7 +137,7 @@ def render_block(b):
                 f'{spk(T(b["letter"]))}<span class="lname">{esc(b["name"])}</span></div>'
                 f'{dots}{ex}</div>')
     if t == "vocab":
-        title = f'<div class="vocab-title">{esc(b["title"])}</div>' if b.get("title") else ""
+        title = f'<div class="vocab-title">{esc(b["title"])}<button class="playall" onclick="playAll(this)">▶ Alle anhören</button></div>' if b.get("title") else ""
         cards = "".join(
             f'<div class="vc">{ar_span(w["arabic"])}'
             f'<span class="lat">{esc(w["t"])}</span>'
@@ -313,12 +313,37 @@ tr:last-child td{border-bottom:none}
 .fbtn.know{background:var(--teal);color:#fff}
 .fbtn.dont{background:var(--sand);color:var(--night)}
 .fbtn.close{background:none;color:#cfdfdd;border:1px solid #456}
+
+/* tempo + play-all */
+.ratebtn{position:absolute;right:12px;top:14px;border:none;background:rgba(255,255,255,.16);
+  color:#fff;border-radius:20px;padding:6px 13px;font-size:.8rem;font-weight:700;cursor:pointer}
+.ratebtn:active{transform:scale(.95)}
+.playall{border:none;background:var(--teal);color:#fff;border-radius:16px;padding:6px 13px;
+  font-size:.75rem;font-weight:800;cursor:pointer;margin-left:10px;vertical-align:middle}
+.playall:active{transform:scale(.95)}
 """
 
 JS = r"""
 let AUDIO = window.__AUDIO__;
 const player=new Audio(); player.preload='auto';
 const _urls={};
+
+// ---- tempo (persisted) ----
+let rate=parseFloat(localStorage.getItem('yj_rate')||'1');
+const rateBtn=document.getElementById('rateBtn');
+function applyRate(){
+  player.playbackRate=rate;
+  if(rateBtn){ rateBtn.textContent = rate<1 ? '🐢 langsam' : '🐇 normal'; }
+}
+if(rateBtn){
+  rateBtn.addEventListener('click',()=>{
+    rate = rate<1 ? 1 : 0.75;
+    try{localStorage.setItem('yj_rate',rate);}catch(e){}
+    applyRate();
+  });
+  applyRate();
+}
+
 function urlFor(aid){
   if(_urls[aid]) return _urls[aid];
   try{
@@ -331,11 +356,52 @@ function urlFor(aid){
   }catch(e){ _urls[aid]=AUDIO[aid].dataUri; }
   return _urls[aid];
 }
+
+// ---- "Alle anhören" queue ----
+let queue=[],qi=0,qPlaying=false,qBtn=null;
+function playAll(btn){
+  if(qPlaying){ stopQueue(); return; }
+  const spks=[...btn.closest('.vocab').querySelectorAll('.spk')];
+  queue=spks.map(b=>b.dataset.id).filter(id=>AUDIO[id]);
+  if(!queue.length) return;
+  qi=0; qPlaying=true; qBtn=btn; btn.textContent='⏹ Stop';
+  playQ();
+}
+function playQ(){
+  if(!qPlaying||qi>=queue.length){ stopQueue(); return; }
+  play(queue[qi]);
+  player.onended=()=>{ qi++; setTimeout(()=>{ if(qPlaying) playQ(); },700); };
+}
+function stopQueue(){
+  qPlaying=false; player.onended=null;
+  if(qBtn){ qBtn.textContent='▶ Alle anhören'; qBtn=null; }
+}
+
+// ---- progress (persisted) ----
+let prog={};
+try{ prog=JSON.parse(localStorage.getItem('yj_prog')||'{}'); }catch(e){ prog={}; }
+function saveProg(){ try{localStorage.setItem('yj_prog',JSON.stringify(prog));}catch(e){} }
+function updateFlashBtns(){
+  document.querySelectorAll('.flashbtn').forEach(btn=>{
+    const mch=(btn.getAttribute('onclick')||'').match(/'([^']+)'/);
+    if(!mch) return;
+    const chap=document.querySelector('.chap[data-c="'+mch[1]+'"]');
+    if(!chap) return;
+    const aids=[...chap.querySelectorAll('.vc .spk')].map(b=>b.dataset.id);
+    const known=aids.filter(id=>prog[id]==='know').length;
+    btn.textContent = known>0
+      ? '🃏 Übe diese Wörter · ✓ '+known+' / '+aids.length
+      : '🃏 Übe diese Wörter';
+  });
+}
+
 function play(aid){
   if(!AUDIO[aid]) return;
+  if(qPlaying) stopQueue();
   const u=urlFor(aid);
   player.pause();
   if(player.src!==u){ player.src=u; } else { try{player.currentTime=0;}catch(e){} }
+  player.playbackRate=rate;
   player.play().catch(()=>{});
 }
 document.body.addEventListener('click', e=>{
@@ -355,9 +421,10 @@ addEventListener('scroll',onScroll); addEventListener('load',onScroll);
 
 // flashcard mode
 const flash=document.getElementById('flash');
-let deck=[],pos=0;
+let deck=[],pos=0,curChap=null;
 function openFlash(chid){
   const chap=document.querySelector('.chap[data-c="'+chid+'"]'); if(!chap) return;
+  curChap=chid;
   deck=[...chap.querySelectorAll('.vc')].map(v=>({
     ar:v.querySelector('.ar').textContent.trim(),
     lat:v.querySelector('.lat').textContent.trim()||'',
@@ -375,13 +442,18 @@ function renderCard(){
   document.querySelector('.f-front .f-t').textContent='tippe, um zu hören';
   document.querySelector('.f-back .f-t').textContent = c.mea || '';
   document.querySelector('.finner').classList.remove('flipped');
-  document.querySelector('.f-count').textContent=(pos+1)+' / '+deck.length;
+  const known=deck.filter(x=>x.aid&&prog[x.aid]==='know').length;
+  document.querySelector('.f-count').textContent=(pos+1)+' / '+deck.length+'  ·  ✓ '+known;
   if(c.aid) play(c.aid);
 }
 function flipCard(){document.querySelector('.finner').classList.toggle('flipped')}
-function next(){pos=(pos+1)%deck.length;renderCard()}
-function closeFlash(){flash.classList.remove('open')}
+function next(kind){
+  if(kind && deck[pos] && deck[pos].aid){ prog[deck[pos].aid]=kind; saveProg(); }
+  pos=(pos+1)%deck.length; renderCard();
+}
+function closeFlash(){flash.classList.remove('open'); updateFlashBtns();}
 document.querySelector('.finner').addEventListener('click',flipCard);
+updateFlashBtns();
 
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
 """
@@ -438,8 +510,8 @@ def build_page(body_html, nav_html):
     <button class="fbtn close" onclick="closeFlash()">✕</button>
   </div>
   <div class="f-btns">
-    <button class="fbtn know" onclick="next()">✓ Kenn ich</button>
-    <button class="fbtn dont" onclick="next()">↻ Nochmal</button>
+    <button class="fbtn know" onclick="next('know')">✓ Kenn ich</button>
+    <button class="fbtn dont" onclick="next('again')">↻ Nochmal</button>
     <button class="fbtn close" onclick="closeFlash()">Beenden</button>
   </div>
 </div>

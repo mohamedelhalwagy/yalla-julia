@@ -1,4 +1,6 @@
 docs/_audio/
 .DS_Store
+.claude/
+.vscode/
 *.aux
 *.log

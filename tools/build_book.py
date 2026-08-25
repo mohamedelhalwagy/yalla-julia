@@ -168,7 +168,7 @@ def main():
 <style>{B.CSS}</style>
 </head>
 <body>
-<header class="topbar"><h1>🐪 Yalla, Julia!</h1><div class="sub">Hocharabisch · الفُصْحى · Band 1</div></header>
+<header class="topbar" style="position:sticky"><h1>🐪 Yalla, Julia!</h1><div class="sub">Hocharabisch · الفُصْحى · Band 1</div><button id="rateBtn" class="ratebtn" title="Tempo wechseln">🐇 normal</button></header>
 <nav class="navbar">{nav_html}</nav>
 {body_html}
 <div class="chap" style="text-align:center;color:#667;font-size:.85rem;padding:10px 16px 30px">
@@ -186,8 +186,8 @@ def main():
     <button class="fbtn close" onclick="closeFlash()">✕</button>
   </div>
   <div class="f-btns">
-    <button class="fbtn know" onclick="next()">✓ Kenn ich</button>
-    <button class="fbtn dont" onclick="next()">↻ Nochmal</button>
+    <button class="fbtn know" onclick="next('know')">✓ Kenn ich</button>
+    <button class="fbtn dont" onclick="next('again')">↻ Nochmal</button>
     <button class="fbtn close" onclick="closeFlash()">Beenden</button>
   </div>
 </div>
