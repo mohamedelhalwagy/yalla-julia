@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 tools/build_app.py)",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('tools/content.py',encoding='utf-8'\\).read\\(\\)\\)\")"
+    ]
+  }
+}

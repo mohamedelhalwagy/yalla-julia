@@ -1,0 +1,16 @@
+{
+  "name": "Yalla, Julia! — Hocharabisch · Band 1",
+  "short_name": "Yalla Julia",
+  "description": "Hocharabisch (Fus'ha) mit voller Vokalierung, Audio und Flashcards",
+  "lang": "de",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#123C4A",
+  "theme_color": "#1B7F79",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

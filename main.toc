@@ -1,0 +1,10 @@
+\xpg@aux {}{german}
+\contentsline {chapter}{Teil 0 -- Wie dieses Buch funktioniert}{iii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Buchstaben-Werkstatt I -- Die Verbinder}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Buchstaben-Werkstatt II -- Die Sturköpfe}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Die kleinen Helfer -- Vokale}{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Überleben I -- Die Begrüßungs-Choreografie}{8}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Überleben II -- Ja, Nein und die Kunst des Feilschens}{10}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Die IBM-Regel}{12}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Zahlen -- Von 1 bis 10}{14}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Übungen, Rätsel und ein Rollenspiel}{16}{chapter.8}%
