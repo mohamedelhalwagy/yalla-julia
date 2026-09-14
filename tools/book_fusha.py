@@ -563,4 +563,302 @@ CHAPTERS = [
              "latin_text": "Bis zum Wiedersehen! — das elegante Abschied"},
         ],
     },
+
+    # =========================================================================
+    # Teil 4 -- Begrüßung (die Choreografie)
+    # =========================================================================
+    {
+        "id": "teil4",
+        "teaser": "Teil 4 — Begrüßung",
+        "blocks": [
+            {"type": "h1", "text": "Teil 4 — Die Begrüßungs-Choreografie"},
+
+            {"type": "p",
+             "text": "Im Arabischen ist eine Begrüßung kein einzelnes Wort — es ist ein "
+             "festes Ritual mit klaren Schritten, wie ein Tanz. Wer den ersten Schritt "
+             "macht, bekommt die passende Antwort. Das ist Höflichkeit in Reinform."},
+
+            {"type": "vocab", "title": "Die Begrüßungs-Choreografie (الفُصْحَى)",
+             "words": [
+                 {"arabic": "السَّلَامُ عَلَيْكُمْ", "t": "as-salāmu ʿalaykum",
+                  "meaning": "Der Friede sei mit euch (universeller Gruß)"},
+                 {"arabic": "وَعَلَيْكُمُ السَّلَامُ", "t": "wa ʿalaykumu s-salām",
+                  "meaning": "Antwort: und auf euch sei der Friede"},
+                 {"arabic": "صَبَاحُ الْخَيْرِ", "t": "ṣabāḥu l-khayr",
+                  "meaning": "Guten Morgen"},
+                 {"arabic": "صَبَاحُ النُّورِ", "t": "ṣabāḥu n-nūr",
+                  "meaning": "Antwort auf Guten Morgen"},
+                 {"arabic": "مَسَاءُ الْخَيْرِ", "t": "masāʾu l-khayr",
+                  "meaning": "Guten Abend"},
+                 {"arabic": "مَسَاءُ النُّورِ", "t": "masāʾu n-nūr",
+                  "meaning": "Antwort auf Guten Abend"},
+                 {"arabic": "كَيْفَ حَالُكَ؟", "t": "kayfa ḥāluka?",
+                  "meaning": "Wie geht es dir? (zu einem Mann)"},
+                 {"arabic": "كَيْفَ حَالُكِ؟", "t": "kayfa ḥāluki?",
+                  "meaning": "Wie geht es dir? (zu einer Frau)"},
+                 {"arabic": "جَيِّدٌ، الْحَمْدُ لِلَّهِ", "t": "jayyidun, al-ḥamdu lillāh",
+                  "meaning": "Gut, Gott sei Dank (Standardantwort — immer!)"},
+                 {"arabic": "شُكْرًا", "t": "shukran",
+                  "meaning": "Danke"},
+                 {"arabic": "الْعَفْوَ", "t": "al-ʿafwa",
+                  "meaning": "Bitte / Gern geschehen (Antwort auf Danke)"},
+                 {"arabic": "مِنْ فَضْلِكَ", "t": "min faḍlika",
+                  "meaning": "Bitte (zu einem Mann)"},
+                 {"arabic": "مِنْ فَضْلِكِ", "t": "min faḍliki",
+                  "meaning": "Bitte (zu einer Frau)"},
+                 {"arabic": "مَعَ السَّلَامَةِ", "t": "maʿa s-salāmati",
+                  "meaning": "Auf Wiedersehen (geh in Frieden)"},
+                 {"arabic": "تُصْبِحُ عَلَى خَيْرٍ", "t": "tuṣbiḥu ʿalā khayrin",
+                  "meaning": "Gute Nacht (zu einem Mann)"},
+             ]},
+
+            {"type": "callout", "variant": "taxi", "title": "Am Mahmoud sagt...", "icon": "🚕",
+             "text": "Egal wie dein Tag war — auf „Kayfa ḥāluka?“ antwortest du IMMER mit "
+             "„Jayyidun, al-ḥamdu lillāh“. Auch wenn dein Taxi gerade eine Panne hatte. "
+             "Das ist keine Lüge, das ist Etikette. Auf Arabisch: der Friede geht vor."},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "Die Antwort auf „Wie geht's?“ im Arabischen ist wie das deutsche "
+             "„gut, und dir?“ — nur dass „gut“ (جَيِّدٌ) hier fast gesetzlich "
+             "vorgeschrieben ist. Niemand antwortet ehrlich. Das ist Teil des Charmes."},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Checkpoint", "icon": "🏁",
+             "text": "Übe laut: „As-salāmu ʿalaykum“ — kurze Pause — „Wa ʿalaykumu s-salām“. "
+             "Wenn das flüssig klingt, bist du bereit für echte Menschen."},
+
+            {"type": "callout", "variant": "tip", "title": "Insider-Tipp", "icon": "💡",
+             "text": "الْعَفْوَ (al-ʿafwa) heißt wörtlich „das Vergebene“. Wenn dir jemand "
+             "danke sagt (شُكْرًا), sagst du al-ʿafwa — „das ist vergeben, alles gut“. "
+             "Ein wunderschönes Wort."},
+        ],
+    },
+
+    # =========================================================================
+    # Teil 5 -- Ja, Nein & Feilschen
+    # =========================================================================
+    {
+        "id": "teil5",
+        "teaser": "Teil 5 — Ja, Nein, Feilschen",
+        "blocks": [
+            {"type": "h1", "text": "Teil 5 — Ja, Nein und die Kunst des Feilschens"},
+
+            {"type": "h2", "text": "Ja und Nein (auf Hocharabisch)"},
+            {"type": "vocab", "title": "Ja und Nein",
+             "words": [
+                 {"arabic": "نَعَمْ", "t": "naʿam",
+                  "meaning": "Ja (formell, universell)"},
+                 {"arabic": "أَجَلْ", "t": "ajal",
+                  "meaning": "Ja (etwas emphatischer)"},
+                 {"arabic": "لَا", "t": "lā",
+                  "meaning": "Nein (formell)"},
+                 {"arabic": "لَا، شُكْرًا", "t": "lā, shukran",
+                  "meaning": "Nein, danke"},
+             ]},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "Fusḥā-Nein heißt لَا (lā) — kurz, klar, höflich. Masri-Nein heißt "
+             "لَأ (la') — mit Kehlkopf-Stopp, das Entschlossenheit signalisiert. "
+             "Lern beides: lā fürs Amt, la' für den Basar."},
+
+            {"type": "h2", "text": "Feilschen — eine Nationalsportart"},
+            {"type": "vocab", "title": "Die Feilsch-Werkzeuge",
+             "words": [
+                 {"arabic": "بِكَمْ هَذَا؟", "t": "bikam hādhā?",
+                  "meaning": "Wie viel kostet das?"},
+                 {"arabic": "غَالٍ جِدًّا!", "t": "ghālin jiddan!",
+                  "meaning": "Viel zu teuer!"},
+                 {"arabic": "كَثِيرٌ جِدًّا", "t": "kathīrun jiddan",
+                  "meaning": "Sehr viel / zu viel"},
+                 {"arabic": "هَلْ يُمْكِنُ أَنْ تُنَزِّلَ السِّعْرَ؟", "t": "hal yumkinu an tunazzila s-siʿra?",
+                  "meaning": "Kannst du den Preis senken?"},
+                 {"arabic": "مَاشِي", "t": "māshī",
+                  "meaning": "Okay, abgemacht"},
+                 {"arabic": "وَاللهِ؟", "t": "wallāhi?",
+                  "meaning": "Wirklich?! (bei Gott — Ausdruck des Erstaunens)"},
+             ]},
+
+            {"type": "callout", "variant": "taxi", "title": "Am Mahmoud sagt...", "icon": "🚕",
+             "text": "Der erste Preis ist wie das erste Angebot auf dem Flohmarkt: eine "
+             "Einladung, keine Tatsache. Nicht handeln ist fast unhöflich — es "
+             "nimmt uns den Spaß. Und غَالٍ جِدًّا (ghālin jiddan) darfst du "
+             "theatralisch mit Augenbrauen begleiten. Das gehört zum Ritual."},
+
+            {"type": "callout", "variant": "tip", "title": "Insider-Tipp", "icon": "💡",
+             "text": "Faustregel für Touristen-Basare: biete zuerst die Hälfte des "
+             "genannten Preises, lächle dabei, und lass dich langsam Richtung "
+             "Mitte verhandeln. Mit غَالٍ جِدًّا! („viel zu teuer!“) darfst du "
+             "theatralisch die Augenbrauen hochziehen — das gehört dazu."},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Checkpoint", "icon": "🏁",
+             "text": "Rollenspiel-Vorbereitung: du wirst بِكَمْ هَذَا؟, غَالٍ جِدًّا! "
+             "und مَاشِي in Teil 8 in einem echten Dialog mit Am Mahmoud "
+             "brauchen. Sprich sie schon jetzt laut."},
+        ],
+    },
+
+    # =========================================================================
+    # Teil 6 -- Die IBM-Regel (Inshallah, Bukra, Maalesh)
+    # =========================================================================
+    {
+        "id": "teil6",
+        "teaser": "Teil 6 — Die IBM-Regel",
+        "blocks": [
+            {"type": "h1", "text": "Teil 6 — Die IBM-Regel"},
+
+            {"type": "callout", "variant": "ibm", "title": "Die IBM-Regel", "icon": "⏱",
+             "text": "إِنْ شَاءَ اللهُ، بُكْرَةَ، مَعْلَشْ — drei Wörter, die die gesamte "
+             "arabische Zeitplanung erklären. Wenn ein Termin „inshāʾallāhu "
+             "bukrata“ (so Gott will, morgen) stattfindet und es doch nicht "
+             "klappt, sagt man einfach „maʿlesh“ (macht nichts) und macht "
+             "weiter. Willkommen im System."},
+
+            {"type": "vocab", "title": "Die IBM-Wörter (voll vokalisiert)",
+             "words": [
+                 {"arabic": "يَلَّا", "t": "yallā",
+                  "meaning": "Los geht's! / Komm schon! / Beeil dich!"},
+                 {"arabic": "خَلَاصْ", "t": "khalāṣ",
+                  "meaning": "Fertig. Schluss. Genug. (das nützlichste Wort überhaupt)"},
+                 {"arabic": "مَعْلَشْ", "t": "maʿlash",
+                  "meaning": "Macht nichts / Kein Problem / Tut mir leid"},
+                 {"arabic": "إِنْ شَاءَ اللهُ", "t": "in shāʾa llāh",
+                  "meaning": "So Gott will (vielleicht, vielleicht auch nicht)"},
+                 {"arabic": "بُكْرَةَ", "t": "bukrata",
+                  "meaning": "Morgen (der Tag nach heute — theoretisch)"},
+                 {"arabic": "حَاضِرْ", "t": "ḥāḍir",
+                  "meaning": "Wird gemacht! / Jawohl! (nützlich gegenüber Am Mahmoud)"},
+             ]},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "خَلَاصْ (khalāṣ) ist das Schweizer Taschenmesser der arabischen "
+             "Sprache. Es bedeutet: „fertig“, „genug jetzt“, „okay, abgemacht“, "
+             "„lass uns aufhören zu streiten“ — und manchmal einfach nur "
+             "„...“. Wenn du nur ein Wort aus diesem Buch behältst, nimm dieses."},
+
+            {"type": "callout", "variant": "bisso", "title": "Bissos Ecke", "icon": "🐈",
+             "text": "Wenn Bisso genug vom Streicheln hat, sagt sie es nicht mit Worten — "
+             "sie geht einfach. Julia, das ist خَلَاصْ in Katzenform."},
+
+            {"type": "callout", "variant": "tip", "title": "Insider-Tipp", "icon": "💡",
+             "text": "بُكْرَةَ (bukrata, „morgen“) ist mit Vorsicht zu genießen — es bedeutet "
+             "nicht zwingend „in 24 Stunden“. Es bedeutet eher „nicht heute, "
+             "aber irgendwann bestimmt“. Plane entsprechend."},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Checkpoint", "icon": "🏁",
+             "text": "Baue einen Satz mit allen drei IBM-Wörtern: „Kommst du morgen?“ — "
+             "„In shāʾa llāh, bukratan!“ — und wenn es nicht klappt: "
+             "„Maʿlash!“ Übe das laut, am besten mit einem Augenzwinkern."},
+        ],
+    },
+
+    # =========================================================================
+    # Teil 7 -- Zahlen (1 bis 10)
+    # =========================================================================
+    {
+        "id": "teil7",
+        "teaser": "Teil 7 — Zahlen",
+        "blocks": [
+            {"type": "h1", "text": "Teil 7 — Zahlen: Von 1 bis 10"},
+
+            {"type": "vocab", "title": "Die Zahlen 1 bis 10 (voll vokalisiert)",
+             "words": [
+                 {"arabic": "وَاحِدٌ", "t": "wāḥidun", "meaning": "1"},
+                 {"arabic": "اثْنَانِ", "t": "ithnāni", "meaning": "2"},
+                 {"arabic": "ثَلَاثَةٌ", "t": "thalāthatun", "meaning": "3"},
+                 {"arabic": "أَرْبَعَةٌ", "t": "arbaʿatun", "meaning": "4"},
+                 {"arabic": "خَمْسَةٌ", "t": "khamsatun", "meaning": "5"},
+                 {"arabic": "سِتَّةٌ", "t": "sittatun", "meaning": "6"},
+                 {"arabic": "سَبْعَةٌ", "t": "sabʿatun", "meaning": "7"},
+                 {"arabic": "ثَمَانِيَةٌ", "t": "thamāniyatun", "meaning": "8"},
+                 {"arabic": "تِسْعَةٌ", "t": "tisʿatun", "meaning": "9"},
+                 {"arabic": "عَشَرَةٌ", "t": "ʿashratun", "meaning": "10"},
+             ]},
+
+            {"type": "callout", "variant": "laugh", "title": "Lach-Pause", "icon": "😄",
+             "text": "Kleine Ironie: die Ziffern, die wir im Deutschen „arabische Ziffern“ "
+             "nennen (0,1,2,3...), sehen im echten Arabisch ganz anders aus. Die "
+             "Ägypter benutzen ihre eigenen Symbole — entdecke sie unten."},
+
+            {"type": "h2", "text": "Die echten arabischen Ziffern"},
+            {"type": "numrow", "digits": ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"],
+             "latin": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]},
+
+            {"type": "callout", "variant": "tip", "title": "Insider-Tipp", "icon": "💡",
+             "text": "Diese Ziffern siehst du auf ägyptischen Preisschildern, "
+             "Nummernschildern und Restaurantrechnungen. Lohnt sich, sie zu "
+             "erkennen, bevor du beim Feilschen (Teil 5!) über den Preis "
+             "verhandelst, den du gar nicht lesen kannst."},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Checkpoint", "icon": "🏁",
+             "text": "Zähle laut von 1 bis 10 auf Arabisch, während du an den Fingern "
+             "abzählst — eine der ältesten und zuverlässigsten Lernmethoden "
+             "der Welt."},
+        ],
+    },
+
+    # =========================================================================
+    # Teil 8 -- Übungen, Rätsel & Rollenspiel
+    # =========================================================================
+    {
+        "id": "teil8",
+        "teaser": "Teil 8 — Übungen & Rollenspiel",
+        "blocks": [
+            {"type": "h1", "text": "Teil 8 — Übungen, Rätsel und ein Rollenspiel"},
+
+            {"type": "h2", "text": "1. Buchstaben-Zuordnung"},
+            {"type": "p", "text": "Zu welchem Buchstaben gehört der erste Laut in diesen Wörtern? "
+             "Schreib den Buchstaben daneben — oder tippe auf 🔊 und vergleiche."},
+
+            {"type": "quiz", "items": [
+                {"arabic": "بَيْتٌ", "t": "baytun", "meaning": "Haus", "answer": "ب"},
+                {"arabic": "تُفَّاحَةٌ", "t": "tuffāḥatun", "meaning": "Apfel", "answer": "ت"},
+                {"arabic": "نُورٌ", "t": "nūrun", "meaning": "Licht", "answer": "ن"},
+                {"arabic": "وَرْدَةٌ", "t": "wardatun", "meaning": "Rose", "answer": "و"},
+                {"arabic": "مِفْتَاحٌ", "t": "miftāḥun", "meaning": "Schlüssel", "answer": "م"},
+                {"arabic": "دَارٌ", "t": "dārun", "meaning": "Haus / Anwesen", "answer": "د"},
+            ]},
+
+            {"type": "h2", "text": "2. Rollenspiel: „Ertappt in Kairo“"},
+            {"type": "dialogue", "title": "Mit Am Mahmoud unterwegs",
+             "lines": [
+                 {"who": "Am Mahmoud", "arabic": "السَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟",
+                  "t": "as-salāmu ʿalaykum! kayfa ḥāluka?",
+                  "german": "Friede sei mit dir! Wie geht's dir?"},
+                 {"who": "Julia", "arabic": "وَعَلَيْكُمُ السَّلَامُ! جَيِّدٌ، الْحَمْدُ لِلَّهِ! وَأَنْتَ؟",
+                  "t": "wa ʿalaykumu s-salām! jayyidun, al-ḥamdu lillāh! wa anta?",
+                  "german": "Und auf dich sei der Friede! Gut, Gott sei Dank! Und du?"},
+                 {"who": "Am Mahmoud", "arabic": "الْحَمْدُ لِلَّهِ! أَيْنَ تُرِيدُ أَنْ تَذْهَبِي؟",
+                  "t": "al-ḥamdu lillāh! ayna turīdu an tadhhabī?",
+                  "german": "Gott sei Dank! Wohin möchtest du gehen?"},
+                 {"who": "Julia", "arabic": "إِلَى السُّوقِ، مِنْ فَضْلِكِ.",
+                  "t": "ilā s-sūqi, min faḍliki.",
+                  "german": "Zum Markt, bitte."},
+                 {"who": "Am Mahmoud", "arabic": "مَاشِي! يَلَّا بَيْنَنَا!",
+                  "t": "māshī! yallā baynanā!",
+                  "german": "Okay! Auf geht's!"},
+                 {"who": "Am Mahmoud", "arabic": "مِئَةُ جُنَيْهٍ.",
+                  "t": "miʾatu junayhin.",
+                  "german": "Das macht 100 Pfund."},
+                 {"who": "Julia", "arabic": "غَالٍ جِدًّا! خَمْسُونَ!",
+                  "t": "ghālin jiddan! khamsūna!",
+                  "german": "Viel zu teuer! Fünfzig!"},
+                 {"who": "Am Mahmoud", "arabic": "طَيِّبْ... مَعْلَشْ، مَاشِي!",
+                  "t": "ṭayyib... maʿlash, māshī!",
+                  "german": "Na gut... macht nichts, abgemacht!"},
+             ]},
+
+            {"type": "callout", "variant": "bisso", "title": "Bissos Ecke", "icon": "🐈",
+             "text": "Während die beiden verhandeln, klaut Bisso in aller Ruhe ein Stück "
+             "Fladenbrot aus Julias Tasche. Niemand hat es kommen sehen. So ist "
+             "das Leben in Kairo: man verhandelt um fünfzig Pfund und verliert "
+             "das Brot trotzdem."},
+
+            {"type": "callout", "variant": "checkpoint", "title": "Geschafft!", "icon": "🎉",
+             "text": "Du kennst jetzt alle 28 Buchstaben, alle Vokalzeichen, eine komplette "
+             "Begrüßungs-Choreografie, wie man in Kairo feilscht, die IBM-Regel, "
+             "die Zahlen 1 bis 10 und sogar ein ganzes Rollenspiel. Das ist "
+             "ehrlich schon eine Menge — مُبَارَكٌ! (mubārakun — Glückwunsch!). "
+             "Band 2 nimmt Café-Bestellungen vor, dazu mehr Am Mahmoud. Sag "
+             "einfach Mohamed Bescheid, wenn du bereit bist."},
+        ],
+    },
 ]
